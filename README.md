@@ -1,4 +1,5 @@
 # Team_Eileithyia
 Official Repo for Team Eileithyia
 
-##pending design
+# add class student
+# pending design details
