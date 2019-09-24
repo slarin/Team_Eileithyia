@@ -1,12 +1,21 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, #3f0252, #eb1dad);
+  background: linear-gradient(to bottom, #170e8a, #a71ce7);
   background-repeat: no-repeat;
   height: auto;
 }
 .header{
+  display: flex;
+  flex-flow: row nowrap;
   height: 10vh;
-  background-color: #140333;
+  background-color: #11102f;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.header>img {
+  height: 30px;
+  margin: auto 20px;
 }
 .banner {
   margin: 30px auto;
@@ -23,11 +32,12 @@ body {
 .grid-item {
   background-color: pink;
   text-align: center;
+  box-shadow: 0px 3.58663px 8.96657px rgba(0, 0, 0, 0.25);
 }
 .grid-item:hover{
   opacity: 0.8;
   cursor: pointer;
-  background-image: url('./plus-button.svg');
+  background-image: url('./assets/plus-button.svg');
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -101,7 +111,7 @@ body {
   display: none;
   position: fixed;
   top: 40vh;
-  margin: 0 39%;
+  margin: 0 42%;
   z-index: 2;
   background-color: #18df54;
   color: #ffffff;
@@ -109,9 +119,42 @@ body {
   padding: 20px;
 }
 
+.footer {
+  color: #ffffff;
+  margin: auto 40px;
+}
+.footer>hr {
+  border: 1px solid #ffffff;
+}
+.contact {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+.contact div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.contact img {
+  height: 20px;
+  margin: auto 5px;
+}
+.contact p {
+  font-size: 0.8rem;
+}
+
 @keyframes zoom {
   from {transform:scale(0)}
   to {transform:scale(1)}
+}
+
+
+@media(max-width: 770px) {
+  .modal-sm {
+    margin: 0 36%;
+  }
 }
 
 @media(max-width: 500px) {
@@ -130,11 +173,19 @@ body {
   .modal-content-btn {
     font-size: 0.8rem;
   }
+  .contact {
+    margin: auto 10px;
+  }
 }
 @media(max-width: 400px) {
   .main-cont {
     grid-template-columns: minmax(70px, 1fr);
   }
+  .modal-sm {
+    margin: 0 22%;
+  }
+}
+@media(max-width: 330px) {
   .modal-sm {
     margin: 0 18%;
   }
