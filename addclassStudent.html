@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Access Classes</title>
+  <title>Add Class</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./addclassStudent.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div class="main-cont">
   <div class="header">
     <img src="./assets/class_icon.svg">
-    <h4>Thyia E-Learning Classroom</h4>
+    <h4>Thyia E - Learning Classroom</h4>
   </div>
 
   <div class="banner">
@@ -18,7 +20,7 @@
     <h4>here are the classes available for you:</h4>
   </div>
 
-  <div class="main-cont">
+  <div class="grid-cont">
     <div class="grid-item" onclick="modaler()" data-nm="Engineering Maths" id="EM">
       <h4>Engineering Maths</h4>
       <p>[short description]</p>
@@ -61,11 +63,12 @@
           <p>[Hours]</p>
           <button class="modal-content-btn" onclick="confirm()">Add Class</button>
         </div>
-      </div>
-    </div>
 
-    <div class="modal-sm" id="confirm-modal">
-      <p>Class Added!</p>
+        <div class="modal-sm" id="confirm-modal">
+          <p>Class Added!</p>
+        </div>
+
+      </div>
     </div>
 
   </div>
@@ -74,16 +77,19 @@
     <hr>
     <div class="contact">
       <div>
-        <img src="./assets/Vectorcp.svg">
+        <img src="./assets/cp.svg">
         <p>Thyia E-learning School 2019</p>
       </div>
       <div>
-        <img src="assets/Vectorfb.svg">
-        <img src="assets/Vectortw.svg">
-        <img src="assets/Vectorgit.svg">
+        <img src="assets/fb.svg">
+        <img src="assets/tw.svg">
+        <img src="assets/git.svg">
       </div>
     </div>
   </div>
+
+  </div>
+
 
   <script>
     var x = document.getElementById('modal');

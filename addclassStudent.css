@@ -1,8 +1,12 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, #170e8a, #a71ce7);
+body{
+  margin: 0;
+  padding: 0;
+}
+.main-cont {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #eaeaee, #f4f3f5);
   background-repeat: no-repeat;
-  height: auto;
+  min-height: 100vh;
 }
 .header{
   display: flex;
@@ -19,10 +23,10 @@ body {
 }
 .banner {
   margin: 30px auto;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
-.main-cont {
+.grid-cont {
   display: grid;
   grid-template-columns: repeat(3, minmax(70px, 1fr));
   grid-auto-rows: minmax(80px, auto);
@@ -30,7 +34,7 @@ body {
   margin: 70px 30px;
 }
 .grid-item {
-  background-color: pink;
+  background-color: #faf6f6;
   text-align: center;
   box-shadow: 0px 3.58663px 8.96657px rgba(0, 0, 0, 0.25);
 }
@@ -81,14 +85,14 @@ body {
 }
 .close-btn:hover,
 .close-btn:focus {
-  color: #bbb;
+  color: #bbbbbb;
   text-decoration: none;
   cursor: pointer;
 }
 .modal-content {
   display: flex;
   flex-flow: column nowrap;
-  margin: 20px 40px;
+  margin: 10px 30px;
   justify-content: center;
   text-align: center;
 }
@@ -110,9 +114,11 @@ body {
 .modal-sm {
   display: none;
   position: fixed;
-  top: 40vh;
-  margin: 0 42%;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin-left: -65px;
+  width: 100px;
+  z-index: 1;
   background-color: #18df54;
   color: #ffffff;
   text-align: center;
@@ -122,9 +128,10 @@ body {
 .footer {
   color: #ffffff;
   margin: auto 40px;
+  background-color: #11102f;
 }
 .footer>hr {
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
 }
 .contact {
   display: flex;
@@ -151,21 +158,12 @@ body {
 }
 
 
-@media(max-width: 770px) {
-  .modal-sm {
-    margin: 0 36%;
-  }
-}
-
 @media(max-width: 500px) {
-  .main-cont {
+  .grid-cont {
     grid-template-columns: repeat(2, minmax(50px, 1fr));
   }
   .modal-content-btn {
     align-self: center;
-  }
-  .modal-sm {
-    margin: 0 26%;
   }
   .modal-content {
     font-size: 0.8rem;
@@ -178,15 +176,7 @@ body {
   }
 }
 @media(max-width: 400px) {
-  .main-cont {
+  .grid-cont {
     grid-template-columns: minmax(70px, 1fr);
-  }
-  .modal-sm {
-    margin: 0 22%;
-  }
-}
-@media(max-width: 330px) {
-  .modal-sm {
-    margin: 0 18%;
   }
 }
