@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./landing_page.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-cont">
+    <div class="header">
+      <div>
+        <img src="./assets/class_icon_blk.svg" class="logo">
+        <h4>Thyia E - Learning Classroom</h4>
+      </div>
+      <img src="./assets/srch_blk.svg" class="icon" alt="search">
+      <div class="directions">
+        <p>Become a Student?</p>
+        <p>Become an Instructor?</p>
+        <p>Sign In</p>
+        <p>Sign Up</p>
+      </div>
+
+      <!--For mobile-->
+      <div id="mobile-directions">
+          <div id="nav-div" onclick="pizaz()">
+              <span class="uno"></span>
+              <span class="uno"></span>
+              <span class="uno"></span>
+          </div>
+      </div>
+  
+      <div id="nav-links">
+          <ul>
+              <li>Become a Student?</li>
+              <li>Become an Instructor?</li>
+              <li>Sign In</li>
+              <li>Sign Up</li>
+          </ul>
+      </div>
+
+    </div>
+
+    <div class="flex-cont">
+      <div class="banner-txt">
+        <h2>Your favourite<br> e - learning platform</h2>
+        <p>
+          We make learning easier, accessible<br> 
+          across all platforms and give you<br> 
+          exercises to test yourself.
+        </p>
+        <button>Learn more</button>
+      </div>
+      <div>
+        <img src="./assets/—Pngtree.png" class="img-lg" alt="education">
+      </div>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <div class="contact">
+          <div>
+            <img src="./assets/cp.svg">
+            <p>Thyia E-learning School 2019</p>
+          </div>
+          <div>
+            <img src="assets/fb.svg">
+            <img src="assets/tw.svg">
+            <img src="assets/git.svg">
+          </div>
+        </div>
+    </div>
+
+  </div>
+  <script>
+    function pizaz(){
+      let x = document.getElementById('nav-links');
+      x.classList.toggle('active');
+    }
+  </script>
+  </body>
+  </html>
