@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Class Student</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./add_class_student.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-cont">
+    <div class="header">
+      <div>
+        <img src="./assets/class_icon_blk.svg" class="logo">
+        <h4>Thyia E - Learning Classroom</h4>
+      </div>
+      <div>
+        <h2>Student's Dashboard</h2>
+      </div>
+      <div class="profile-sm">
+        <img src="./assets/chat.svg">
+        <img src="./assets/avatar_sm.png" class="avatar-sm">
+        <img src="./assets/arrow_dwn.svg">
+      </div>
+    </div>
+
+    <div class="main-grid">
+
+    <div class="sidebar">
+      <div class="profile-lg">
+        <img src="./assets/avatar_lg.png" class="avatar-lg">
+        <div class="indicator">
+          <img src="./assets/indicator.svg" class="icon"><h2>OJEBA JOHN</h2>
+        </div>
+      </div>
+      <hr>
+      <hr>
+      <div class="profile-lg">
+        <div class="list-item"><img src="./assets/dashboard.svg" class="icon">Dashboard</div>
+        <div class="list-item"><img src="./assets/profile_wht.svg" class="icon">Profile</div>
+        <div class="list-item"><img src="./assets/class_icon.svg" class="icon">Add Class</div>
+        <div class="list-item"><img src="./assets/play.svg" class="icon">Log Out</div>
+        <div class="list-item"><img src="./assets/bell.svg" class="icon">Notifications</div>
+        <div class="list-item"><img src="./assets/calender.svg" class="icon">My Calendar</div>
+        <div class="list-item"><img src="./assets/profile.svg" class="icon">Contact</div>
+      </div>
+      <hr>
+      <hr>
+    </div>
+
+    <div class="sm-grid">
+      <div class="class-list">
+        <div class="grid-cont">
+          <div class="grid-item" onclick="modaler()" data-nm="Engineering Maths" id="EM">
+            <h4>Engineering Maths</h4>
+            <p>[short description]</p>
+            <p>[Teacher's Name]</p>
+            <p>[Hours]</p>
+          </div>
+          <div class="grid-item" onclick="modaler()" data-nm="Particle Physics" id="PP">
+              <h4>Particle Physics</h4>
+              <p>[short description]</p>
+              <p>[Teacher's Name]</p>
+              <p>[Hours]</p>
+          </div>
+          <div class="grid-item" onclick="modaler()" data-nm="English" id="E">
+              <h4>English</h4>
+              <p>[short description]</p>
+              <p>[Teacher's Name]</p>
+              <p>[Hours]</p>
+          </div>
+          <div class="grid-item" onclick="modaler()" data-nm="Chinese" id="C">
+              <h4>Chinese</h4>
+              <p>[short description]</p>
+              <p>[Teacher's Name]</p>
+              <p>[Hours]</p>
+          </div>
+          <div class="grid-item" onclick="modaler()" data-nm="History" id="H">
+            <h4>History</h4>
+            <p>[short description]</p>
+            <p>[Teacher's Name]</p>
+            <p>[Hours]</p>
+          </div>
+
+          <div class="sign-up-modal" id="modal">
+            <span class="close-btn" onclick="closer()">&times;</span>
+            <div class="modal-div">
+              <div class="modal-content">
+                <h3 id="subject-display">Engineering English</h3>
+                <p>[Long description]</p>
+                <p>[Material]</p>
+                <p>[Teacher's Name]</p>
+                <p>[Hours]</p>
+                <button class="modal-content-btn" onclick="confirm()">Add Class</button>
+              </div>
+      
+              <div class="modal-sm" id="confirm-modal">
+                <p>Class Added!</p>
+              </div>
+      
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <img src="./assets/cp.svg">
+    <p>Copyright Thyla E-Learning. All Rights Reserved 2019.</p>
+  </div>
+
+  <script>
+    var x = document.getElementById('modal');
+    var y = document.getElementById('subject-display');
+    var z = document.getElementById('confirm-modal');
+    var idr;
+
+    function modaler() {
+      /*the next 2 lines of code just add data to the modal for initial display,
+      php will handle it better.*/
+      let subject = event.currentTarget.dataset.nm;
+      y.innerHTML = subject;
+
+      /*this next 2 lines remove a subject after it has been added,
+      better with php too*/
+      let getId = event.currentTarget.id;
+      idr = document.getElementById(getId)
+
+      //displays modal
+      x.style.display = 'block';
+    }
+    function closer() {
+      x.style.display = 'none';
+    }
+    function confirm() {
+      z.style.display = 'block';
+      setTimeout(reset, 1500);
+    }
+    function reset(){
+      z.style.display = 'none';
+      x.style.display = 'none';
+      idr.style.display = 'none';
+    }
+  </script>
+  
+</body>
+
+</html>
