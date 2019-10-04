@@ -1,0 +1,15 @@
+@import '../bootstrap/css/bootstrap.min.css';
+section {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  padding: 0;
+}
+.form {
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
