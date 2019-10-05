@@ -1,6 +1,6 @@
 @import '../bootstrap/css/bootstrap.min.css';
 section {
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
